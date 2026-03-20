@@ -177,6 +177,27 @@
         const chatWindow = document.getElementById('chat-window');
         const userInput = document.getElementById('user-input');
         const typingIndicator = document.getElementById('typing-indicator');
+        
+async function getGroqResponse(userMessage) {
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+            "Authorization": "Bearer TU_API_KEY_AQUI", // Reemplaza con tu clave
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            model: "mixtral-8x7b-32768", // O el modelo que prefieras de Groq
+            messages: [
+                { role: "system", content: "Eres un experto en estadísticas de fútbol." },
+                { role: "user", content: userMessage }
+            ]
+        })
+    });
+
+    const data = await response.json();
+    return data.choices[0].message.content;
+}
+        
 
         // Permitir enviar con la tecla Enter
         userInput.addEventListener("keypress", (e) => {
