@@ -13,7 +13,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # CONFIGURACIÓN
-GROQ_API_KEY = "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"
+GROQ_API_KEY = GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 PDF_NAME = "mundiales.pdf"
 
 # Crear el cliente de Groq una sola vez
