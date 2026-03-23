@@ -7,3 +7,4 @@ chromadb
 langchain-text-splitters
 groq
 pypdf
+flask
