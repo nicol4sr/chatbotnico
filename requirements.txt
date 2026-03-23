@@ -1,0 +1,9 @@
+flask
+python-dotenv
+langchain
+langchain-community
+langchain-huggingface
+chromadb
+langchain-text-splitters
+groq
+pypdf
