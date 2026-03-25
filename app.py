@@ -19,10 +19,7 @@ PDF_NAME = "mundiales.pdf"
 # Crear el cliente de Groq una sola vez
 client = Groq(api_key=GROQ_API_KEY)
 
-app = Flask(__name__)
 
-# --- CONFIGURACIÓN ---
-app = Flask(__name__)
 
 # Ahora traemos la llave de forma segura
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
