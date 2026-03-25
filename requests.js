@@ -25,6 +25,7 @@ async function sendMessage() {
         }
 
         const data = await response.json();
+appendMessage(data.response, 'bot-message');
 
         // IMPORTANTE: Aquí leemos 'data.response' porque así lo definimos en Flask
         if (data.response) {
